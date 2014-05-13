@@ -1,0 +1,75 @@
+横浜支店　宇野作成
+2014/05/13　現在
+
+【Herokuについて調査】
+※Herokuについては現在碓井さんが対応して調査しています．
+
+
+・基本的無料，拡張機能を使う場合は，段階的に有料」
+
+
+・Herokuアプリ1個の無料部分の基本スペック[1](web参照)
+※2011年4月現在
+容量		圧縮状態で100MBまで (gitやgem関連のファイルは含まず)
+データベース	PostgreSQLで5MBまで (有料で他のDBも使用可能)
+cron		1日に1回 (有料で1時間に1回)
+ログ		直近の100行までを閲覧可能
+プロセス	1dyno分が無料 (dynoはHeroku独自の単位)
+リクエスト	1dynoで秒間10-50リクエストを処理可能
+メモリー	1dynoで最大300MBまで
+Rubyのver	1.8.6, 1.8.7, 1.9.2が利用可能
+
+
+・HerokuはGitリポジトリを持っている（webではそのように記述されている）[2]
+
+・FTP でアクセスしログファイルを見るという通常のレンタルサーバでならよく行う手法が簡単にはできない[3]
+
+・HerokuとGithubの両方違い[4]
+　・HerokuもGithubもgitのリモートリポジトリを作るサービス。
+　・ローカルリポジトリをリモートリポジトリであるHerokuまたはGithubにpushすることで外に出すことができる。
+　・どちらもリモートリポジトリだが、Githubの方はそこにpushすることでソースが公開される。
+　・一方、Herokuの方はそこにpushすることでアプリが公開される。つまり、URLを持ったサービスとしてアプリが立ち上がる。
+　　目的が違う(web引用）
+
+
+・既存のHerokuのレポジトリの設定[5]
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+・SSH設定の仕方
+【参照】
+https://teachme.jp/contents/21633
+http://blog.infinity-dimensions.com/2012/02/heroku-public-key-add.html
+この記述に関してはまだ手をつけていません
+-----------------------------------------------------------------------------------
+・SSLの設定？
+【参照】
+http://qiita.com/GenTamura84/items/7a12ca611705017bcb0e
+http://interu.hatenablog.com/entry/2012/07/25/184812
+この記述に関してはまだ手をつけていません
+----------------------------------------------------------------------------------
+
+
+
+
+
+【参考文献】
+
+[1] http://blog.ruedap.com/2011/04/29/ruby-heroku-web-app-development-tips-1
+[2] http://tande.jp/lab/2012/08/1871
+[3] http://www.ownway.info/Ruby/index.php?heroku%2Fcando
+[4] http://kuroigamen.com/22
+[5] http://shirusu-ni-tarazu.hatenablog.jp/entry/2012/01/24/020934
+
+
+
+・http://blog.mah-lab.com/2013/05/16/heroku-commons-16/
+・http://qiita.com/ka_/items/2ad2826329abeb49dfa2
+・http://blog.gufii.net/weblog/archives/10
+・	
